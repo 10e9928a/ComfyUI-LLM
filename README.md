@@ -16,7 +16,7 @@
 
 ```bash
 cd ComfyUI/custom_nodes/
-git clone https://github.com/yourusername/ComfyUI-LLM.git
+git clone https://github.com/10e9928a/ComfyUI-LLM.git
 ```
 
 ### 方法2：手动安装
