@@ -69,7 +69,7 @@ Documentation = "https://github.com/10e9928a/ComfyUI-LLM"
 Changelog = "https://github.com/10e9928a/ComfyUI-LLM/releases"
 
 [tool.comfy]
-PublisherId = "10e9928a"
+PublisherId = "e9928a10"
 DisplayName = "ComfyUI-LLM"
 Icon = ""
 includes = []
