@@ -1,0 +1,103 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ComfyUI-LLM"
+description = "A ComfyUI custom node for integrating LLM API calls into workflows"
+version = "1.0.0"
+readme = "README.md"
+requires-python = ">=3"
+license = {text = "MIT"}
+authors = [
+    {name = "10e9928a", email = "10e9928a@gmail.com"}
+]
+keywords = [
+    "comfyui",
+    "llm",
+    "openai",
+    "ai",
+    "machine-learning",
+    "custom-node",
+    "api",
+    "chatgpt"
+]
+classifiers = [
+    # Development status
+    "Development Status :: 4 - Beta",
+    
+    # Intended audience
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    
+    # License
+    "License :: OSI Approved :: MIT License",
+    
+    # Programming language
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    
+    # Operating System - works on all platforms
+    "Operating System :: OS Independent",
+    
+    # Topics
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+dependencies = [
+    "requests>=2.31.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/10e9928a/ComfyUI-LLM"
+Repository = "https://github.com/10e9928a/ComfyUI-LLM"
+Documentation = "https://github.com/10e9928a/ComfyUI-LLM"
+"Bug Tracker" = "https://github.com/10e9928a/ComfyUI-LLM/issues"
+Changelog = "https://github.com/10e9928a/ComfyUI-LLM/releases"
+
+[tool.comfy]
+PublisherId = "10e9928a"
+DisplayName = "ComfyUI-LLM"
+Icon = ""
+includes = []
+requires-comfyui = ">=0.1.0"
+
+[tool.black]
+line-length = 100
+target-version = ['py38', 'py39', 'py310', 'py311']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+
